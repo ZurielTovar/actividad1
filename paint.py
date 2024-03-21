@@ -36,11 +36,6 @@ def square(start, end):
     end_fill()
 
 
-def circle(start, end):
-    """Draw circle from start to end."""
-    pass  # TODO
-
-
 def rectangle(start, end):
     """Draw rectangle from start to end."""
     pass  # TODO
@@ -48,7 +43,22 @@ def rectangle(start, end):
 
 def triangle(start, end):
     """Draw triangle from start to end."""
-    pass  # TODO
+
+def draw_circle(start, end):
+	radius =  (((start.x - end.x)**2 + (start.y - end.y)**2 )**(1/2))
+	up()
+	goto(start.x, start.y)
+	down()
+	begin_fill()
+	
+	circle(radius)
+	end_fill()
+
+
+
+
+
+
 
 
 def tap(x, y):
@@ -82,7 +92,8 @@ onkey(lambda: color('yellow'), 'Y')
 onkey(lambda: color('red'), 'R')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
-onkey(lambda: store('shape', circle), 'c')
+onkey(lambda: store('shape', draw_circle), 'c')
 onkey(lambda: store('shape', rectangle), 'r')
 onkey(lambda: store('shape', triangle), 't')
 done()
+
