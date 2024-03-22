@@ -37,8 +37,10 @@ def square(start, end):
 
 
 
+
 def rectangle(start, end):
     """Draw rectangle from start to end."""
+    #Aqui añadimos la funcion de rectangulo, usando width y height
     up()
     goto(start.x, start.y)
     down()
@@ -57,7 +59,7 @@ def rectangle(start, end):
 
 def triangle(start, end):
     """Draw triangle from start to end."""
-    #pass  # TODO
+    #Aqui añadimos la funcion  del triangulo jugando con los angulos
     up()
     goto(start.x, start.y)
     down()
@@ -70,6 +72,7 @@ def triangle(start, end):
 
 
 def draw_circle(start, end):
+        #Aqui añadimos la funcion del circulo usando la funcion de circle de la libreria turtle 
 	radius =  (((start.x - end.x)**2 + (start.y - end.y)**2 )**(1/2))
 	up()
 	goto(start.x, start.y)
@@ -107,7 +110,7 @@ onkey(lambda: color('black'), 'K')
 onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
-onkey(lambda: color('yellow'), 'Y')
+onkey(lambda: color('yellow'), 'Y') #Aqui se añadio  el color amarillo al juego
 onkey(lambda: color('red'), 'R')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
